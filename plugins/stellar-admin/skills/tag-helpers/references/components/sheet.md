@@ -12,9 +12,7 @@ A panel that slides in from an edge of the screen, rendered over a native `<dial
 
 ## Required structure
 
-The trigger button lives **outside** `<sa-sheet>` and points at it via
-`commandfor`. The sheet's own children are shallow — header (title +
-description), body content, and footer.
+The trigger button lives **outside** `<sa-sheet>` and points at it via `commandfor`. The sheet's own children are shallow — header (title + description), body content, and footer.
 
 ```
 (a trigger <sa-button commandfor="…" command="show-modal">)   ← outside the sheet

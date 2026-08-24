@@ -12,9 +12,7 @@ A horizontal flex layout that arranges its children in a row, with configurable 
 
 ## What's in here
 
-"Layout" is a folder of **three independent layout primitives**, not one component family. The
-summary above describes `<sa-group>` only, because it sorts first. Read the Tags table below
-for each one:
+"Layout" is a folder of **three independent layout primitives**, not one component family. The summary above describes `<sa-group>` only, because it sorts first. Read the Tags table below for each one:
 
 | Tag | Use it for |
 |-----|------------|
@@ -22,8 +20,7 @@ for each one:
 | `<sa-stack>` | A vertical column. |
 | `<sa-group>` | A horizontal row. |
 
-`<sa-stack>` and `<sa-group>` are the spacing primitives to reach for instead of hand-rolling
-flex utilities — control rhythm with their `gap` / `align` / `justify` enum attributes.
+`<sa-stack>` and `<sa-group>` are the spacing primitives to reach for instead of hand-rolling flex utilities — control rhythm with their `gap` / `align` / `justify` enum attributes.
 
 <!-- structure:end -->
 

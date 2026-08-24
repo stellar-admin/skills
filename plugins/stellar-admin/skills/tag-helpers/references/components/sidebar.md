@@ -12,8 +12,7 @@ The sidebar panel itself, hosting its header, content, and footer. On desktop it
 
 ## Required structure
 
-`<sa-sidebar-wrapper>` is the top-level container and holds **two** children:
-the `<sa-sidebar>` and a `<sa-sidebar-inset>` for the page content.
+`<sa-sidebar-wrapper>` is the top-level container and holds **two** children: the `<sa-sidebar>` and a `<sa-sidebar-inset>` for the page content.
 
 ```
 sa-sidebar-wrapper
