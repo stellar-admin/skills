@@ -1,0 +1,21 @@
+{
+  "name": "stellar-admin-pro",
+  "version": "0.0.1",
+  "description": "Build admin screens with StellarAdmin Pro \u2014 the admin shell, the resource layer, the data grid, and StellarAdmin.Pro.Identity. Requires a StellarAdmin Pro license.",
+  "author": {
+    "name": "Jerrie Pelser"
+  },
+  "homepage": "https://www.stellaradmin.com",
+  "repository": "https://github.com/stellar-admin/skills",
+  "license": "MIT",
+  "keywords": [
+    "stellar-admin",
+    "stellar-admin-pro",
+    "aspnetcore",
+    "razor",
+    "mvc",
+    "admin",
+    "data-grid",
+    "identity"
+  ]
+}
