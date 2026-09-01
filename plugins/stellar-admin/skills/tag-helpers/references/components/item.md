@@ -1,6 +1,6 @@
 ---
 component: Item
-tags: [sa-item, sa-item-actions, sa-item-content, sa-item-description, sa-item-footer, sa-item-group, sa-item-header, sa-item-media, sa-item-separator, sa-item-title, sa-link-item]
+tags: [sa-item, sa-item-actions, sa-item-content, sa-item-description, sa-item-footer, sa-item-group, sa-item-header, sa-item-link, sa-item-media, sa-item-separator, sa-item-title]
 generated: true
 ---
 
@@ -19,10 +19,10 @@ A flexible row for presenting content, combining media, a title, description, an
 | `<sa-item-footer>` | The footer region of an item, spanning its full width beneath the main content. |
 | `<sa-item-group>` | A vertical list container that groups related items together. |
 | `<sa-item-header>` | The header region of an item, spanning its full width above the main content. |
+| `<sa-item-link>` | An item rendered as an anchor, making the entire row a clickable link. |
 | `<sa-item-media>` | The leading media region of an item, holding an icon, image, or avatar. |
 | `<sa-item-separator>` | A horizontal divider used to separate items within a group. |
 | `<sa-item-title>` | The primary title text of an item. |
-| `<sa-link-item>` | An item rendered as an anchor, making the entire row a clickable link. |
 
 ## Attributes
 
@@ -36,14 +36,7 @@ A flexible row for presenting content, combining media, a title, description, an
 
 > In Razor, enum values are written fully-qualified, e.g. `variant="ButtonVariant.Outline"`.
 
-### `<sa-item-media>`
-
-| Attribute | Type | Default | Values |
-|-----------|------|---------|--------|
-| `variant` | `ItemMediaVariant` | `Default` | `Default`, `Icon`, `Image` |
-| `class` | `string` | — | Extra Tailwind utilities; merged last, so it overrides defaults. |
-
-### `<sa-link-item>`
+### `<sa-item-link>`
 
 | Attribute | Type | Default | Values |
 |-----------|------|---------|--------|
@@ -60,6 +53,13 @@ A flexible row for presenting content, combining media, a title, description, an
 | `asp-route` | `string` | `null` | — |
 | `asp-all-route-data` | `IDictionary<string, string?>` | — | — |
 | `asp-route-*` | `IDictionary<string, string?>` | — | — |
+| `class` | `string` | — | Extra Tailwind utilities; merged last, so it overrides defaults. |
+
+### `<sa-item-media>`
+
+| Attribute | Type | Default | Values |
+|-----------|------|---------|--------|
+| `variant` | `ItemMediaVariant` | `Default` | `Default`, `Icon`, `Image` |
 | `class` | `string` | — | Extra Tailwind utilities; merged last, so it overrides defaults. |
 
 ## Examples
@@ -80,7 +80,7 @@ A flexible row for presenting content, combining media, a title, description, an
         </sa-button>
     </sa-item-actions>
 </sa-item>
-<sa-link-item variant="ItemVariant.Outline" size="ItemSize.Small" href="#">
+<sa-item-link variant="ItemVariant.Outline" size="ItemSize.Small" href="#">
     <sa-item-media>
         <sa-icon name="luggage" class="size-5"/>
     </sa-item-media>
@@ -90,13 +90,13 @@ A flexible row for presenting content, combining media, a title, description, an
     <sa-item-actions>
         <sa-icon name="chevron-right" class="size-4"/>
     </sa-item-actions>
-</sa-link-item>
+</sa-item-link>
 ```
 
 *From `Pages/Item/_Link.cshtml`*
 
 ```razor
-<sa-link-item asp-controller="Booking" asp-action="Manage" asp-route-id="123">
+<sa-item-link asp-controller="Booking" asp-action="Manage" asp-route-id="123">
     <sa-item-content>
         <sa-item-title>Manage My Booking</sa-item-title>
         <sa-item-description>
@@ -106,8 +106,8 @@ A flexible row for presenting content, combining media, a title, description, an
     <sa-item-actions>
         <sa-icon name="chevron-right" class="size-4"/>
     </sa-item-actions>
-</sa-link-item>
-<sa-link-item variant="ItemVariant.Outline" href="#" target="_blank" rel="noopener noreferrer">
+</sa-item-link>
+<sa-item-link variant="ItemVariant.Outline" href="#" target="_blank" rel="noopener noreferrer">
     <sa-item-content>
         <sa-item-title>View Current Visa Requirements</sa-item-title>
         <sa-item-description>
@@ -117,5 +117,5 @@ A flexible row for presenting content, combining media, a title, description, an
     <sa-item-actions>
         <sa-icon name="external-link" class="size-4"/>
     </sa-item-actions>
-</sa-link-item>
+</sa-item-link>
 ```
