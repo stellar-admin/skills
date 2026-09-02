@@ -6,6 +6,7 @@
 | [Alert](components/alert.md) | `<sa-alert>`, `<sa-alert-action>`, `<sa-alert-description>`, … | A callout that displays a short, important message to the user, optionally with an icon, title, and description. |
 | [AlertDialog](components/alert-dialog.md) | `<sa-alert-dialog>`, `<sa-alert-dialog-action>`, `<sa-alert-dialog-cancel>`, … | A modal dialog that interrupts the user to confirm an important action, rendered over a native `<dialog>` element. |
 | [AppHeader](components/app-header.md) | `<sa-app-header>`, `<sa-app-header-actions>`, `<sa-app-header-separator>` | The application's top navigation bar, rendered as a `<header>` element. |
+| [Attachment](components/attachment.md) | `<sa-attachment>`, `<sa-attachment-action>`, `<sa-attachment-actions>`, … | A file or image presented with its media, metadata, upload state, and actions. |
 | [Avatar](components/avatar.md) | `<sa-avatar>`, `<sa-avatar-badge>`, `<sa-avatar-group>`, … | Displays a user's image, falling back to initials or a name-derived monogram when no image is available. |
 | [Badge](components/badge.md) | `<sa-badge>` | A small label used to highlight status, counts, or categories. |
 | [Breadcrumb](components/breadcrumb.md) | `<sa-breadcrumb>`, `<sa-breadcrumb-ellipsis>`, `<sa-breadcrumb-item>`, … | A breadcrumb navigation trail, rendered as a `<nav>`; shows the path to the current page. |
