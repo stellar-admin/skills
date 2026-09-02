@@ -26,6 +26,7 @@
 | [Kbd](components/kbd.md) | `<sa-kbd>`, `<sa-kbd-group>` | Displays a single keyboard key or keystroke. |
 | [Label](components/label.md) | `<sa-label>` | A caption for a form control, optionally bound to a model expression via `asp-for`. |
 | [Layout](components/layout.md) | `<sa-group>`, `<sa-page-container>`, `<sa-stack>` | A horizontal flex layout that arranges its children in a row, with configurable alignment, spacing, and justification. |
+| [Marker](components/marker.md) | `<sa-marker>`, `<sa-marker-button>`, `<sa-marker-content>`, … | An inline note in a conversation, such as a status update, a system message or a labeled divider. |
 | [Message](components/message.md) | `<sa-message>`, `<sa-message-avatar>`, `<sa-message-content>`, … | A single message in a conversation, laying out its avatar, content, header and footer. |
 | [PageHeader](components/page-header.md) | `<sa-page-header>`, `<sa-page-header-actions>`, `<sa-page-header-description>`, … | A header section at the top of a page's content, rendered as a `<header>` element. |
 | [Pagination](components/pagination.md) | `<sa-pagination>`, `<sa-pagination-content>`, `<sa-pagination-ellipsis>`, … | Navigation for moving between pages of content. |
