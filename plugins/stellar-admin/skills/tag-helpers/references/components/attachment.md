@@ -163,7 +163,7 @@ A file or image presented with its media, metadata, upload state, and actions.
     </sa-attachment>
     <sa-attachment state="AttachmentState.Processing">
         <sa-attachment-media>
-            <sa-spinner/>
+            <sa-icon name="id-card"/>
         </sa-attachment-media>
         <sa-attachment-content>
             <sa-attachment-title>passport-priya.jpg</sa-attachment-title>
