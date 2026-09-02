@@ -29,6 +29,7 @@
 | [Layout](components/layout.md) | `<sa-group>`, `<sa-page-container>`, `<sa-stack>` | A horizontal flex layout that arranges its children in a row, with configurable alignment, spacing, and justification. |
 | [Marker](components/marker.md) | `<sa-marker>`, `<sa-marker-button>`, `<sa-marker-content>`, … | An inline note in a conversation, such as a status update, a system message or a labeled divider. |
 | [Message](components/message.md) | `<sa-message>`, `<sa-message-avatar>`, `<sa-message-content>`, … | A single message in a conversation, laying out its avatar, content, header and footer. |
+| [MessageScroller](components/message-scroller.md) | `<sa-message-scroller>`, `<sa-message-scroller-button>`, `<sa-message-scroller-content>`, … | A scrolling frame for a conversation, holding the transcript and its scroll controls. |
 | [PageHeader](components/page-header.md) | `<sa-page-header>`, `<sa-page-header-actions>`, `<sa-page-header-description>`, … | A header section at the top of a page's content, rendered as a `<header>` element. |
 | [Pagination](components/pagination.md) | `<sa-pagination>`, `<sa-pagination-content>`, `<sa-pagination-ellipsis>`, … | Navigation for moving between pages of content. |
 | [Popover](components/popover.md) | `<sa-popover>`, `<sa-popover-description>`, `<sa-popover-header>`, … | A floating panel of rich content anchored to a trigger element, rendered as a native popover. |
