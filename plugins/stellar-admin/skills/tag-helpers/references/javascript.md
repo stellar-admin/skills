@@ -24,6 +24,7 @@ A handful of tag helpers render a custom element around or in place of their mar
 | `<sa-dialog>`, `<sa-alert-dialog>`, `<sa-sheet>` | `<sel-dialog>` | Locks page scrolling while a modal is open; mirrors open state in `data-open`. |
 | `<sa-dropdown-menu-content>`, `<sa-dropdown-menu-sub-content>` | `<sel-dropdown-menu>` | Menu semantics over a native popover: roving arrow-key focus, Home/End, type-ahead, Enter/Space activation, close-on-select, checkbox and radio items, sub-menu open/close. |
 | `<sa-input-otp>` | `<sel-input-otp>` | Keeps the visual slot cells in sync with the backing `<input>`, shows the active cell and caret, enforces the pattern. |
+| `<sa-questionnaire>` | `<sel-questionnaire>` | Shortcut keys for the choices; arrow keys that move between a question's answers and wrap at either end; a free-text answer replacing the choice a single-answer question holds. |
 | `<sa-sidebar-wrapper>` | `<sel-sidebar>` | Tracks expanded/collapsed on desktop and the drawer state on mobile; handles `--toggle-sidebar`, `--open-mobile`, `--close-mobile`. |
 | `<sa-slider>` | `<sel-slider>` | Pointer and keyboard interaction for the thumbs; keeps the range fill, `aria-valuenow` and hidden form inputs in sync. |
 | `<sa-table-selection>` | `<sel-table-selection>` | Select-all / indeterminate handling and the `data-state="selected"` row highlight. |
