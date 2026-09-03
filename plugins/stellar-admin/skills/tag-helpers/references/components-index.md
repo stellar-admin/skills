@@ -34,6 +34,7 @@
 | [Pagination](components/pagination.md) | `<sa-pagination>`, `<sa-pagination-content>`, `<sa-pagination-ellipsis>`, … | Navigation for moving between pages of content. |
 | [Popover](components/popover.md) | `<sa-popover>`, `<sa-popover-description>`, `<sa-popover-header>`, … | A floating panel of rich content anchored to a trigger element, rendered as a native popover. |
 | [Progress](components/progress.md) | `<sa-progress>`, `<sa-progress-label>`, `<sa-progress-value>` | A progress bar that visualizes the completion of a task as a filled track. |
+| [Questionnaire](components/questionnaire.md) | `<sa-questionnaire>`, `<sa-questionnaire-actions>`, `<sa-questionnaire-choice>`, … | A container for one or more questionnaire items. |
 | [Select](components/select.md) | `<sa-select>` | A styled dropdown for choosing a single option, wrapping a native `<select>` element with a custom chevron icon. |
 | [Separator](components/separator.md) | `<sa-separator>` | A thin dividing line between sections of content, rendered as a `<div>` with `role="separator"`. |
 | [Sheet](components/sheet.md) | `<sa-sheet>`, `<sa-sheet-description>`, `<sa-sheet-footer>`, … | A panel that slides in from an edge of the screen, rendered over a native `<dialog>` element. |
