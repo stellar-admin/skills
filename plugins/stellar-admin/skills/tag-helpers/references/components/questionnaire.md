@@ -57,6 +57,7 @@ A container for one or more questionnaire items. Place it inside your own `<form
 | `asp-format` | `string` | — | — |
 | `type` | `string` | `text` | — |
 | `render-error` | `bool` | `true` | `true`, `false` |
+| `replaces-choices` | `bool` | `true` | `true`, `false` |
 | `value` | `string` | — | — |
 | `class` | `string` | — | Extra Tailwind utilities; merged last, so it overrides defaults. |
 
