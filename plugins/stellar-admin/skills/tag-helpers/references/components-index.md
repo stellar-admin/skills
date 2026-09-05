@@ -14,6 +14,7 @@
 | [Button](components/button.md) | `<sa-button>`, `<sa-linkbutton>` | Renders a button element for triggering actions. |
 | [ButtonGroup](components/button-group.md) | `<sa-button-group>`, `<sa-button-group-separator>`, `<sa-button-group-text>` | Groups related buttons together as a single visual unit. |
 | [Card](components/card.md) | `<sa-card>`, `<sa-card-action>`, `<sa-card-content>`, … | A flexible container that groups related content, composed of a header, title, description, content, footer, and action subcomponents. |
+| [Carousel](components/carousel.md) | `<sa-carousel>`, `<sa-carousel-content>`, `<sa-carousel-indicators>`, … | A scrollable collection of slides with optional navigation controls. |
 | [Collapsible](components/collapsible.md) | `<sa-collapsible>` | A container whose content can be expanded or collapsed. |
 | [Dialog](components/dialog.md) | `<sa-dialog>`, `<sa-dialog-description>`, `<sa-dialog-footer>`, … | A modal window overlaid on the page, rendered over a native `<dialog>` element. |
 | [DropdownMenu](components/dropdown-menu.md) | `<sa-dropdown-menu>`, `<sa-dropdown-menu-checkbox-item>`, `<sa-dropdown-menu-content>`, … | The root of a dropdown menu, pairing a trigger with its content and generating the shared id that links them. |
