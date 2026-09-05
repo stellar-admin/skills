@@ -203,7 +203,7 @@ Slots in fixed order: header (title / description / optional action) → content
 - Dividers are opt-in utilities: `<sa-card-header class="border-b">` / `<sa-card-footer class="border-t">`.
 - `size="CardSize.Small"` tightens the padding.
 - The `class` values above (`mx-auto`, `w-full`, `max-w-sm`, `flex-col gap-2`) are Tailwind utilities, so they only take effect if the app runs its own Tailwind build — see conventions.md §4. Without one, size and center the card with your own CSS class instead.
-- Building the form inside the card? See the `stellar-admin:forms` skill.
+- Building the form inside the card? See the [forms](../forms/SKILL.md) skill.
 
 ## Rules
 

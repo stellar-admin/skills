@@ -1,20 +1,16 @@
 ---
 name: tag-helpers
 description: >-
-  Builds ASP.NET Core MVC / Razor Pages UIs with StellarAdmin Tag Helpers (the <sa-*>
+  Builds ASP.NET Core MVC / Razor Pages UIs with StellarAdmin Tag Helpers (the sa-*
   elements from the StellarAdmin.TagHelpers package). Covers project setup, the component
   catalog (tags, attributes, enum values, examples), and the conventions that make
   StellarAdmin markup correct — attribute pass-through, fully-qualified enums in Razor,
   the Invoker Commands API for overlays, model binding and routing attributes. Use when
   editing .cshtml or .razor files that use StellarAdmin, when scaffolding a new
   StellarAdmin page or form, or when the user mentions StellarAdmin, StellarAdmin Tag
-  Helpers, or any <sa-*> component.
+  Helpers, or any sa-* component.
 metadata:
   author: StellarAdmin
-paths:
-  - "**/*.cshtml"
-  - "**/*.razor"
-  - "**/_ViewImports.cshtml"
 ---
 
 # Building UIs with StellarAdmin Tag Helpers
@@ -35,7 +31,7 @@ The detail lives in `references/`, loaded on demand — open only what the task 
 - **`references/javascript.md`** — the `stellar-admin.js` bundle: which components need it, Invoker Commands, and the promise-based `window.stellarAdmin.dialog()` / `alertDialog()` helpers.
 - **`references/templated-views.md`** — writing your own tag helpers that render through a Razor view, and passing content into named slots with `<sa-slot-content>` / `<sa-slot-outlet>`.
 
-For focused tasks there are companion skills: **`stellar-admin:forms`** (fields, validation, model binding), **`stellar-admin:layout`** (app shell, page structure, cards), and **`stellar-admin:theming`** (themes, dark mode, design tokens).
+For focused tasks there are companion skills: **[forms](../forms/SKILL.md)** (fields, validation, model binding), **[layout](../layout/SKILL.md)** (app shell, page structure, cards), and **[theming](../theming/SKILL.md)** (themes, dark mode, design tokens).
 
 ## The six things to get right (details in conventions.md)
 
