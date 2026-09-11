@@ -20,6 +20,8 @@
 | [DropdownMenu](components/dropdown-menu.md) | `<sa-dropdown-menu>`, `<sa-dropdown-menu-checkbox-item>`, `<sa-dropdown-menu-content>`, … | The root of a dropdown menu, pairing a trigger with its content and generating the shared id that links them. |
 | [Empty](components/empty.md) | `<sa-empty>`, `<sa-empty-content>`, `<sa-empty-description>`, … | An empty-state container that communicates the absence of content, composed of a header, media, title, description, and content subcomponents. |
 | [Field](components/field.md) | `<sa-field>`, `<sa-field-content>`, `<sa-field-description>`, … | Wraps a form control together with its label, description, and error message, arranging them according to the chosen orientation. |
+| [FormRow](components/form-row.md) | `<sa-form-row>` | Arranges form content in equal-width columns that stack in narrow containers. |
+| [FormSection](components/form-section.md) | `<sa-form-section>` | Groups form content under a title with an optional description. |
 | [Icon](components/icon.md) | `<sa-icon>` | Renders an SVG icon from the active icon pack by name. |
 | [Input](components/input.md) | `<sa-input>` | A form input. |
 | [InputGroup](components/input-group.md) | `<sa-input-group>`, `<sa-input-group-addon>`, `<sa-input-group-button>`, … | A container that groups an input with add-ons, buttons, or text so they render as a single combined field. |
@@ -36,6 +38,7 @@
 | [Popover](components/popover.md) | `<sa-popover>`, `<sa-popover-description>`, `<sa-popover-header>`, … | A floating panel of rich content anchored to a trigger element, rendered as a native popover. |
 | [Progress](components/progress.md) | `<sa-progress>`, `<sa-progress-label>`, `<sa-progress-value>` | A progress bar that visualizes the completion of a task as a filled track. |
 | [Questionnaire](components/questionnaire.md) | `<sa-questionnaire>`, `<sa-questionnaire-actions>`, `<sa-questionnaire-choice>`, … | A container for one or more questionnaire items. |
+| [SegmentedControl](components/segmented-control.md) | `<sa-segmented-control>`, `<sa-segmented-control-item>` | A group of radio buttons styled as a segmented control. |
 | [Select](components/select.md) | `<sa-select>` | A styled dropdown for choosing a single option, wrapping a native `<select>` element with a custom chevron icon. |
 | [Separator](components/separator.md) | `<sa-separator>` | A thin dividing line between sections of content, rendered as a `<div>` with `role="separator"`. |
 | [Sheet](components/sheet.md) | `<sa-sheet>`, `<sa-sheet-description>`, `<sa-sheet-footer>`, … | A panel that slides in from an edge of the screen, rendered over a native `<dialog>` element. |
