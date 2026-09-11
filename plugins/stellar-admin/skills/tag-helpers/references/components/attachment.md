@@ -74,7 +74,7 @@ A file or image presented with its media, metadata, upload state, and actions.
 
 ```razor
 <div class="flex flex-col gap-3">
-    <div class="flex gap-3">
+    <div class="flex flex-wrap gap-3">
         <sa-attachment orientation="AttachmentOrientation.Vertical">
             <sa-attachment-media variant="AttachmentMediaVariant.Image">
                 <img src="/gradients/gradient-1.jpg" alt="Sunrise over the Arashiyama bamboo grove"/>

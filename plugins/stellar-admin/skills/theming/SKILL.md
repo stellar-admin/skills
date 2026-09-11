@@ -16,7 +16,7 @@ metadata:
 
 ## Pick a theme (the layout `<link>`)
 
-StellarAdmin ships nine themes: `ledger`, `vega`, `nova`, `luma`, `lyra`, `maia`, `mira`, `rhea`, `sera`. Ledger is independently designed; the other eight derive from shadcn/ui.
+StellarAdmin ships ten themes: `concourse`, `ledger`, `vega`, `nova`, `luma`, `lyra`, `maia`, `mira`, `rhea`, `sera`. Concourse and Ledger are independently designed; the other eight derive from shadcn/ui.
 
 The eight shadcn-derived themes share the same base palette and radius; their component geometry, density, and token usage differ. Ledger supplies its own warm light palette, charcoal dark palette, typography, and raised button treatment. Select a theme for its visual design; override semantic variables when the app needs different brand colours.
 
@@ -26,7 +26,13 @@ The eight shadcn-derived themes share the same base palette and radius; their co
 
 To change the theme, change `nova` to another theme name — that's the whole operation. You **must** link exactly one; without it, components render unstyled.
 
-Preview all nine themes with the StellarAdmin documentation demo picker. The [shadcn/ui Create page](https://ui.shadcn.com/create) covers the eight upstream-derived styles; Ledger is specific to StellarAdmin.
+Preview all ten themes with the StellarAdmin documentation demo picker. The [shadcn/ui Create page](https://ui.shadcn.com/create) covers the eight upstream-derived styles; Concourse and Ledger are specific to StellarAdmin.
+
+### Concourse
+
+Use `stellar-admin.concourse.css` as the single theme bundle. Load Source Sans 3 (UI, weights 400/500/600/700) and IBM Plex Mono (identifiers and values, weights 400/500) from the app layout, self-hosted or through a font provider. The stylesheet does not fetch fonts. Existing tag helpers and the `.dark` class work unchanged.
+
+Concourse has cool grey surfaces, a blue accent, 4px corners, and 34px default controls. Actions use colour changes without press movement; neutral hover feedback stays distinct from persistent selection. Use existing components rather than the handoff's `.cc-*` classes. Concourse-specific `--sa-concourse-*` variables are implementation details. When overriding the primary colour, coordinate its `--sa-concourse-primary-hover`, `--sa-concourse-primary-pressed`, and `--sa-concourse-primary-border` companions in both modes; destructive actions have corresponding hover, border, and foreground companions. Touch target sizing belongs to the app's responsive composition.
 
 ### Ledger
 
