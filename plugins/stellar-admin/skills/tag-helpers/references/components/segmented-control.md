@@ -64,6 +64,25 @@ Use the component for a single choice from a short list. It has one horizontal a
 </sa-segmented-control>
 ```
 
+*From `Pages/SegmentedControl/_Icons.cshtml`*
+
+```razor
+<sa-segmented-control name="travel-mode-icons" value="Flights" aria-label="Travel mode">
+    <sa-segmented-control-item value="Flights">
+        <sa-icon name="plane" aria-hidden="true" />
+        Flights
+    </sa-segmented-control-item>
+    <sa-segmented-control-item value="Stays">
+        <sa-icon name="bed-double" aria-hidden="true" />
+        Stays
+    </sa-segmented-control-item>
+    <sa-segmented-control-item value="Cars">
+        <sa-icon name="car-front" aria-hidden="true" />
+        Cars
+    </sa-segmented-control-item>
+</sa-segmented-control>
+```
+
 *From `Pages/SegmentedControl/_ModelBinding.cshtml`*
 
 ```razor
