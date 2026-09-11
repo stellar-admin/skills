@@ -16,9 +16,9 @@ metadata:
 
 ## Pick a theme (the layout `<link>`)
 
-StellarAdmin ships the same themes as shadcn/ui: `vega`, `nova`, `luma`, `lyra`, `maia`, `mira`, `rhea`, `sera`.
+StellarAdmin ships nine themes: `ledger`, `vega`, `nova`, `luma`, `lyra`, `maia`, `mira`, `rhea`, `sera`. Ledger is independently designed; the other eight derive from shadcn/ui.
 
-**A theme changes shape, not color.** All eight bundles carry the *same* color palette and the same base `--radius`; what differs is the per-component styling (corner radii, borders, weights, padding, shadows, and which semantic token each component reaches for) and the `--sa-gap-*` spacing scale. So picking `sera` over `nova` will not give you a different set of brand colors — **to change colors, override the CSS variables** (next section). Pick the theme for the shape and density you want; set the palette yourself.
+The eight shadcn-derived themes share the same base palette and radius; their component geometry, density, and token usage differ. Ledger supplies its own warm light palette, charcoal dark palette, typography, and raised button treatment. Select a theme for its visual design; override semantic variables when the app needs different brand colours.
 
 ```razor
 <link rel="stylesheet" href="/_content/StellarAdmin.TagHelpers/stellar-admin.nova.css" asp-append-version="true"/>
@@ -26,7 +26,13 @@ StellarAdmin ships the same themes as shadcn/ui: `vega`, `nova`, `luma`, `lyra`,
 
 To change the theme, change `nova` to another theme name — that's the whole operation. You **must** link exactly one; without it, components render unstyled.
 
-To preview the look of each, use the [shadcn/ui Create page](https://ui.shadcn.com/create) — its *Style* picker corresponds to the StellarAdmin themes.
+Preview all nine themes with the StellarAdmin documentation demo picker. The [shadcn/ui Create page](https://ui.shadcn.com/create) covers the eight upstream-derived styles; Ledger is specific to StellarAdmin.
+
+### Ledger
+
+Use `stellar-admin.ledger.css` as the single theme bundle. Load Lexend (UI, weights 300–700) and JetBrains Mono (identifiers and shortcuts, weights 400–500) from the app's layout, self-hosted or through a font provider. The library stylesheet does not fetch fonts. Existing tag helpers and the `.dark` class work unchanged, including shared surfaces used by Pro.
+
+Preserve raised borders and shadows on primary, secondary, outline, and destructive buttons; ghost and link actions are flat. Do not reproduce the original prototype's `.ldg-*` classes. Use StellarAdmin's normal components. Ledger-specific `--sa-ledger-*` variables are implementation details rather than shared tokens. If customising primary/destructive colours, coordinate their `--sa-ledger-primary-hover`, `--sa-ledger-primary-border`, `--sa-ledger-destructive-hover`, `--sa-ledger-destructive-border`, and `--sa-ledger-destructive-foreground` companions in both modes.
 
 ## Dark mode
 
