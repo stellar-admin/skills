@@ -16,7 +16,7 @@ metadata:
 
 ## Pick a theme (the layout `<link>`)
 
-StellarAdmin ships ten themes: `concourse`, `ledger`, `vega`, `nova`, `luma`, `lyra`, `maia`, `mira`, `rhea`, `sera`. Concourse and Ledger are independently designed; the other eight derive from shadcn/ui.
+StellarAdmin ships eleven themes: `concourse`, `ice`, `ledger`, `vega`, `nova`, `luma`, `lyra`, `maia`, `mira`, `rhea`, `sera`. Concourse, Ice, and Ledger are independently designed; the other eight derive from shadcn/ui.
 
 The eight shadcn-derived themes share the same base palette and radius; their component geometry, density, and token usage differ. Ledger supplies its own warm light palette, charcoal dark palette, typography, and raised button treatment. Select a theme for its visual design; override semantic variables when the app needs different brand colours.
 
@@ -26,7 +26,7 @@ The eight shadcn-derived themes share the same base palette and radius; their co
 
 To change the theme, change `nova` to another theme name — that's the whole operation. You **must** link exactly one; without it, components render unstyled.
 
-Preview all ten themes with the StellarAdmin documentation demo picker. The [shadcn/ui Create page](https://ui.shadcn.com/create) covers the eight upstream-derived styles; Concourse and Ledger are specific to StellarAdmin.
+Preview all eleven themes with the StellarAdmin documentation demo picker. The [shadcn/ui Create page](https://ui.shadcn.com/create) covers the eight upstream-derived styles; Concourse, Ice, and Ledger are specific to StellarAdmin.
 
 ### Concourse
 
@@ -39,6 +39,12 @@ Concourse has cool grey surfaces, a blue accent, 4px corners, and 34px default c
 Use `stellar-admin.ledger.css` as the single theme bundle. Load Lexend (UI, weights 300–700) and JetBrains Mono (identifiers and shortcuts, weights 400–500) from the app's layout, self-hosted or through a font provider. The library stylesheet does not fetch fonts. Existing tag helpers and the `.dark` class work unchanged, including shared surfaces used by Pro.
 
 Preserve raised borders and shadows on primary, secondary, outline, and destructive buttons; ghost and link actions are flat. Do not reproduce the original prototype's `.ldg-*` classes. Use StellarAdmin's normal components. Ledger-specific `--sa-ledger-*` variables are implementation details rather than shared tokens. If customising primary/destructive colours, coordinate their `--sa-ledger-primary-hover`, `--sa-ledger-primary-border`, `--sa-ledger-destructive-hover`, `--sa-ledger-destructive-border`, and `--sa-ledger-destructive-foreground` companions in both modes.
+
+### Ice
+
+Use `stellar-admin.ice.css` as the single theme bundle. Load IBM Plex Sans (UI, weights 400/500/600) and JetBrains Mono (data and shortcuts, weights 400/500/700) from the app layout, self-hosted or through a font provider. The stylesheet does not fetch fonts. Existing tag helpers and the `.dark` class work unchanged.
+
+Ice uses square geometry, hairline borders, no elevation shadows, blue accents, and 28px default controls. Preserve neutral hover feedback, indicator-only dropdown check/radio selection, and outlined destructive actions; destructive confirmation buttons inside alert-dialog footers are filled. Use `font-mono tabular-nums` for numeric app content. Choose larger controls where the app needs more generous touch targets. Theme-private `--sa-ice-*` tokens retain separate readable accent, bright fill/marker, and light/dark ink roles; coordinate these when changing the accent.
 
 ## Dark mode
 
