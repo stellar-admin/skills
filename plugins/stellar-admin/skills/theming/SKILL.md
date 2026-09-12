@@ -16,7 +16,7 @@ metadata:
 
 ## Pick a theme (the layout `<link>`)
 
-StellarAdmin ships thirteen themes: `concourse`, `ice`, `ledger`, `vega`, `nova`, `observatory`, `luma`, `lyra`, `maia`, `meridian`, `mira`, `rhea`, `sera`. Concourse, Ice, Ledger, Meridian, and Observatory are independently designed; the other eight derive from shadcn/ui.
+StellarAdmin ships fourteen themes: `aurora`, `concourse`, `ice`, `ledger`, `vega`, `nova`, `observatory`, `luma`, `lyra`, `maia`, `meridian`, `mira`, `rhea`, `sera`. Aurora, Concourse, Ice, Ledger, Meridian, and Observatory are independently designed; the other eight derive from shadcn/ui.
 
 The eight shadcn-derived themes share the same base palette and radius; their component geometry, density, and token usage differ. Ledger supplies its own warm light palette, charcoal dark palette, typography, and raised button treatment. Select a theme for its visual design; override semantic variables when the app needs different brand colours.
 
@@ -26,7 +26,22 @@ The eight shadcn-derived themes share the same base palette and radius; their co
 
 To change the theme, change `nova` to another theme name — that's the whole operation. You **must** link exactly one; without it, components render unstyled.
 
-Preview all thirteen themes with the StellarAdmin documentation demo picker. The [shadcn/ui Create page](https://ui.shadcn.com/create) covers the eight upstream-derived styles; Concourse, Ice, Ledger, Meridian, and Observatory are specific to StellarAdmin.
+Preview all fourteen themes with the StellarAdmin documentation demo picker. The [shadcn/ui Create page](https://ui.shadcn.com/create) covers the eight upstream-derived styles; Aurora, Concourse, Ice, Ledger, Meridian, and Observatory are specific to StellarAdmin.
+
+### Aurora
+
+Aurora uses cool grey-green surfaces, deep teal accents in light mode and bright teal in dark mode, square corners, and flat bordered cards. Sliders have square tracks and thumbs; switches, radio controls, avatars and status dots stay round. Dark inputs use a recessed surface.
+
+Load Archivo (headings and UI, normal 400/500/600) and IBM Plex Mono (numbers, identifiers and shortcuts, normal 400/500) from your application layout, then link the Aurora bundle:
+
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"/>
+<link rel="stylesheet" href="/_content/StellarAdmin.TagHelpers/stellar-admin.aurora.css" asp-append-version="true"/>
+```
+
+The fonts can be self-hosted. The stylesheet does not fetch them; use the usual `dark` class to switch modes. Default controls are 30px high, small controls 24px, and large controls 38px. Tables use 9px vertical cell padding. Use `font-mono tabular-nums` for numbers and identifiers in your own markup, and provide larger touch targets in mobile layouts. Dropdown checkbox and radio items use trailing checkmarks without a persistent selected row fill. Default tabs match segmented controls; horizontal line tabs show only the active underline.
+
+Coordinate theme-private `--sa-aurora-*` accent hover/active and tint companions when changing brand colours. Keep the existing component behaviors and responsive layouts.
 
 ### Concourse
 
