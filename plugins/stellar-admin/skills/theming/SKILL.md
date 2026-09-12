@@ -16,7 +16,7 @@ metadata:
 
 ## Pick a theme (the layout `<link>`)
 
-StellarAdmin ships eleven themes: `concourse`, `ice`, `ledger`, `vega`, `nova`, `luma`, `lyra`, `maia`, `mira`, `rhea`, `sera`. Concourse, Ice, and Ledger are independently designed; the other eight derive from shadcn/ui.
+StellarAdmin ships twelve themes: `concourse`, `ice`, `ledger`, `vega`, `nova`, `observatory`, `luma`, `lyra`, `maia`, `mira`, `rhea`, `sera`. Concourse, Ice, Ledger, and Observatory are independently designed; the other eight derive from shadcn/ui.
 
 The eight shadcn-derived themes share the same base palette and radius; their component geometry, density, and token usage differ. Ledger supplies its own warm light palette, charcoal dark palette, typography, and raised button treatment. Select a theme for its visual design; override semantic variables when the app needs different brand colours.
 
@@ -26,7 +26,7 @@ The eight shadcn-derived themes share the same base palette and radius; their co
 
 To change the theme, change `nova` to another theme name — that's the whole operation. You **must** link exactly one; without it, components render unstyled.
 
-Preview all eleven themes with the StellarAdmin documentation demo picker. The [shadcn/ui Create page](https://ui.shadcn.com/create) covers the eight upstream-derived styles; Concourse, Ice, and Ledger are specific to StellarAdmin.
+Preview all twelve themes with the StellarAdmin documentation demo picker. The [shadcn/ui Create page](https://ui.shadcn.com/create) covers the eight upstream-derived styles; Concourse, Ice, Ledger, and Observatory are specific to StellarAdmin.
 
 ### Concourse
 
@@ -45,6 +45,12 @@ Preserve raised borders and shadows on primary, secondary, outline, and destruct
 Use `stellar-admin.ice.css` as the single theme bundle. Load IBM Plex Sans (UI, weights 400/500/600) and JetBrains Mono (data and shortcuts, weights 400/500/700) from the app layout, self-hosted or through a font provider. The stylesheet does not fetch fonts. Existing tag helpers and the `.dark` class work unchanged.
 
 Ice uses square geometry, hairline borders, no elevation shadows, blue accents, and 28px default controls. Preserve neutral hover feedback, indicator-only dropdown check/radio selection, and outlined destructive actions; destructive confirmation buttons inside alert-dialog footers are filled. Use `font-mono tabular-nums` for numeric app content. Choose larger controls where the app needs more generous touch targets. Theme-private `--sa-ice-*` tokens retain separate readable accent, bright fill/marker, and light/dark ink roles; coordinate these when changing the accent.
+
+### Observatory
+
+Use `stellar-admin.observatory.css` as the single theme bundle. Load IBM Plex Sans (normal 400/500/600) and IBM Plex Mono (normal 400/500) from the app layout, self-hosted or through a font provider. The stylesheet does not fetch fonts; existing tag helpers and the `.dark` class work unchanged.
+
+Observatory uses cool neutral surfaces, blue/cyan accents, 4px corners, 32px default controls, and compact table spacing (7px vertical cell padding). Dark cards have no shadow. Compact is built in, with no density setting required. Use `font-mono tabular-nums` for numeric app content and larger controls where touch interaction needs them. Preserve indicator-only dropdown selection, neutral hover feedback, and matching default-tab/segmented-control surfaces. Theme-private `--sa-observatory-*` tokens are implementation details; coordinate accent hover/active and tint companions when changing brand colours.
 
 ## Dark mode
 
