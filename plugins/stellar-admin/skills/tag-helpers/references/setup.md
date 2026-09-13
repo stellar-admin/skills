@@ -35,10 +35,10 @@ Keep the framework's own line (`Microsoft.AspNetCore.Mvc.TagHelpers`) — the de
 
 ## 4. Reference the CSS and JS assets (your layout, e.g. `_Layout.cshtml`)
 
-The assets are served from the package as static web assets under `_content/StellarAdmin.TagHelpers/`. The CSS ships as one self-contained bundle per theme (`vega`, `nova`, `luma`, `lyra`, `maia`, `mira`, `rhea`, `sera`); link exactly one — switching themes is switching the `<link>`:
+The assets are served from the package as static web assets under `_content/StellarAdmin.TagHelpers/`. The CSS ships as one self-contained bundle per theme (such as `shadcn.nova` or `ledger`; upstream-derived themes use the `shadcn.` prefix); link exactly one — switching themes is switching the `<link>`:
 
 ```razor
-<link rel="stylesheet" href="/_content/StellarAdmin.TagHelpers/stellar-admin.nova.css" asp-append-version="true"/>
+<link rel="stylesheet" href="/_content/StellarAdmin.TagHelpers/stellar-admin.shadcn.nova.css" asp-append-version="true"/>
 <script defer src="/_content/StellarAdmin.TagHelpers/stellar-admin.js" asp-append-version="true"></script>
 ```
 
