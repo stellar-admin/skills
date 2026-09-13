@@ -16,7 +16,7 @@ metadata:
 
 ## Pick a theme (the layout `<link>`)
 
-StellarAdmin ships fourteen themes: `aurora`, `concourse`, `ice`, `ledger`, `vega`, `nova`, `observatory`, `luma`, `lyra`, `maia`, `meridian`, `mira`, `rhea`, `sera`. Aurora, Concourse, Ice, Ledger, Meridian, and Observatory are independently designed; the other eight derive from shadcn/ui.
+StellarAdmin ships fifteen themes: `aurora`, `concourse`, `ice`, `ledger`, `vega`, `nova`, `observatory`, `parallax`, `luma`, `lyra`, `maia`, `meridian`, `mira`, `rhea`, `sera`. Aurora, Concourse, Ice, Ledger, Meridian, Observatory, and Parallax are independently designed; the other eight derive from shadcn/ui.
 
 The eight shadcn-derived themes share the same base palette and radius; their component geometry, density, and token usage differ. Ledger supplies its own warm light palette, charcoal dark palette, typography, and raised button treatment. Select a theme for its visual design; override semantic variables when the app needs different brand colours.
 
@@ -26,7 +26,22 @@ The eight shadcn-derived themes share the same base palette and radius; their co
 
 To change the theme, change `nova` to another theme name — that's the whole operation. You **must** link exactly one; without it, components render unstyled.
 
-Preview all fourteen themes with the StellarAdmin documentation demo picker. The [shadcn/ui Create page](https://ui.shadcn.com/create) covers the eight upstream-derived styles; Aurora, Concourse, Ice, Ledger, Meridian, and Observatory are specific to StellarAdmin.
+Preview all fifteen themes with the StellarAdmin documentation demo picker. The [shadcn/ui Create page](https://ui.shadcn.com/create) covers the eight upstream-derived styles; Aurora, Concourse, Ice, Ledger, Meridian, Observatory, and Parallax are specific to StellarAdmin.
+
+### Parallax
+
+Parallax uses cool blue-grey surfaces, a red-orange action accent, nested 6px and 4px corners, and elevated cards and overlays in both modes. Dark inputs recess below their cards. Space Grotesk sets headings and UI; JetBrains Mono sets explicitly marked numbers, identifiers and shortcuts.
+
+Load Space Grotesk (normal 400/500/600) and JetBrains Mono (normal 400/500) from your application layout, then link the Parallax bundle:
+
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"/>
+<link rel="stylesheet" href="/_content/StellarAdmin.TagHelpers/stellar-admin.parallax.css" asp-append-version="true"/>
+```
+
+Fonts can be self-hosted; the stylesheet does not fetch them. Use the usual `dark` class for dark mode. Default controls are 32px high, small controls 26px, and large controls 40px. Table cells use 10px vertical padding. Use `font-mono tabular-nums` for data in your own markup. Menus use trailing checkmarks without a persistent selected fill, and horizontal line tabs show only the active underline.
+
+Parallax separates accent fills (`--primary`) from accent text (`--sa-parallax-accent-ink`) so small orange labels remain legible in light mode. Coordinate the theme-private hover, active and tint values when customizing the accent. Chart colors use neutral and status roles.
 
 ### Aurora
 
