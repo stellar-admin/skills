@@ -21,12 +21,12 @@ StellarAdmin ships fifteen themes: `aurora`, `concourse`, `ice`, `ledger`, `shad
 The eight shadcn-derived themes share the same base palette and radius; their component geometry, density, typography, and token usage differ. Ledger supplies its own warm light palette, charcoal dark palette, typography, and raised button treatment. Select a theme for its visual design; override semantic variables when the app needs different brand colours.
 
 ```razor
-<link rel="stylesheet" href="/_content/StellarAdmin.TagHelpers/stellar-admin.shadcn.nova.css" asp-append-version="true"/>
+<link rel="stylesheet" href="/_content/StellarAdmin.TagHelpers/stellar-admin.observatory.css" asp-append-version="true"/>
 ```
 
 The `shadcn.` prefix is reserved for upstream-derived themes; independent themes keep their unprefixed names. When upgrading, replace old links such as `stellar-admin.nova.css` with `stellar-admin.shadcn.nova.css`; old bundle names are no longer shipped.
 
-To change the theme, change `shadcn.nova` to another theme name — that's the whole operation. You **must** link exactly one; without it, components render unstyled.
+Observatory is the default used in the documentation and the recommended starting point when the user has no theme preference. To change the theme, change `observatory` to another theme name — that's the whole operation. You **must** link exactly one; without it, components render unstyled.
 
 Preview all fifteen themes with the StellarAdmin documentation demo picker. The [shadcn/ui Create page](https://ui.shadcn.com/create) covers the eight upstream-derived styles; Aurora, Concourse, Ice, Ledger, Meridian, Observatory, and Parallax are specific to StellarAdmin.
 
