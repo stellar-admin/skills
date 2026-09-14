@@ -18,7 +18,7 @@ metadata:
 
 StellarAdmin ships fifteen themes: `aurora`, `concourse`, `ice`, `ledger`, `shadcn.vega`, `shadcn.nova`, `observatory`, `parallax`, `shadcn.luma`, `shadcn.lyra`, `shadcn.maia`, `meridian`, `shadcn.mira`, `shadcn.rhea`, `shadcn.sera`. Aurora, Concourse, Ice, Ledger, Meridian, Observatory, and Parallax are independently designed; the other eight derive from shadcn/ui.
 
-The eight shadcn-derived themes share the same base palette and radius; their component geometry, density, and token usage differ. Ledger supplies its own warm light palette, charcoal dark palette, typography, and raised button treatment. Select a theme for its visual design; override semantic variables when the app needs different brand colours.
+The eight shadcn-derived themes share the same base palette and radius; their component geometry, density, typography, and token usage differ. Ledger supplies its own warm light palette, charcoal dark palette, typography, and raised button treatment. Select a theme for its visual design; override semantic variables when the app needs different brand colours.
 
 ```razor
 <link rel="stylesheet" href="/_content/StellarAdmin.TagHelpers/stellar-admin.shadcn.nova.css" asp-append-version="true"/>
@@ -29,6 +29,19 @@ The `shadcn.` prefix is reserved for upstream-derived themes; independent themes
 To change the theme, change `shadcn.nova` to another theme name — that's the whole operation. You **must** link exactly one; without it, components render unstyled.
 
 Preview all fifteen themes with the StellarAdmin documentation demo picker. The [shadcn/ui Create page](https://ui.shadcn.com/create) covers the eight upstream-derived styles; Aurora, Concourse, Ice, Ledger, Meridian, Observatory, and Parallax are specific to StellarAdmin.
+
+### Shadcn fonts
+
+The shadcn themes include optional StellarAdmin font defaults with native fallbacks. Luma, Mira, Rhea and Vega use Inter; Nova uses Geist; Maia uses Figtree; Lyra uses JetBrains Mono for both body and headings; Sera uses Noto Sans for body text and Playfair Display for component titles. These are StellarAdmin defaults, not required upstream pairings. Rhea matches Luma.
+
+Optionally load the selected family at weights 400–700, then link its theme bundle. For Sera:
+
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400..700&amp;family=Playfair+Display:wght@400..700&amp;display=swap"/>
+<link rel="stylesheet" href="/_content/StellarAdmin.TagHelpers/stellar-admin.shadcn.sera.css" asp-append-version="true"/>
+```
+
+Sera’s `--sa-sera-font-display` stack falls back to Georgia, Times New Roman, Times and `serif`. Use `sa-font-heading` for headings in your own markup. Lyra falls back to the native mono stack below; Maia prefers Avenir Next, Avenir and Segoe UI before `system-ui, sans-serif`. Other shadcn body stacks use `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`. Apps can override `--font-sans`, `--font-mono`, or Sera’s heading variable with ordinary CSS.
 
 ### Parallax
 
@@ -90,9 +103,9 @@ Use `stellar-admin.meridian.css` as the single theme bundle. Optionally load Ins
 
 Meridian uses warm paper/deep umber surfaces, brass accents, 2px corners, 32px default controls and 11px vertical table-cell padding. Small controls are 26px and large controls 40px. Keep the display/body/mono type roles distinct; use `font-mono tabular-nums` for numeric app content. Preserve trailing checkmarks for both dropdown checkbox and radio selection, neutral hover feedback, and matching default tabs/segmented controls. Choose larger controls for touch use. Coordinate theme-private `--sa-meridian-*` accent hover/active and tint companions when changing brand colours.
 
-## Optional custom-theme fonts
+## Optional theme fonts
 
-All seven custom themes work with only their StellarAdmin stylesheet. Their original families come first in the CSS stacks; if those fonts are unavailable, the browser uses native fallbacks automatically. Omit the Google Fonts stylesheet and preconnect links for zero font downloads. No JavaScript or additional fallback CSS is required. Font sizes, weights and spacing stay the same.
+All fifteen themes work with only their StellarAdmin stylesheet. Their preferred families come first in the CSS stacks; if those fonts are unavailable, the browser uses native fallbacks automatically. Omit the Google Fonts stylesheet and preconnect links for zero font downloads. No JavaScript or additional fallback CSS is required. Font sizes, weights and spacing stay the same.
 
 Aurora, Meridian and Parallax fall back to `"Helvetica Neue", Helvetica, Arial, "Liberation Sans", system-ui, sans-serif`. Concourse, Ice and Observatory use `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`. Ledger uses `"Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif`; Avenir is optional and not guaranteed on every device. Meridian headings prefer Instrument Sans, then Work Sans, before the native stack.
 
