@@ -34,7 +34,7 @@ Preview all fifteen themes with the StellarAdmin documentation demo picker. The 
 
 Parallax uses cool blue-grey surfaces, a red-orange action accent, nested 6px and 4px corners, and elevated cards and overlays in both modes. Dark inputs recess below their cards. Space Grotesk sets headings and UI; JetBrains Mono sets explicitly marked numbers, identifiers and shortcuts.
 
-Load Space Grotesk (normal 400/500/600) and JetBrains Mono (normal 400/500) from your application layout, then link the Parallax bundle:
+Optionally load Space Grotesk (normal 400/500/600) and JetBrains Mono (normal 400/500) from your application layout, then link the Parallax bundle:
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"/>
@@ -49,7 +49,7 @@ Parallax separates accent fills (`--primary`) from accent text (`--sa-parallax-a
 
 Aurora uses cool grey-green surfaces, deep teal accents in light mode and bright teal in dark mode, square corners, and flat bordered cards. Sliders have square tracks and thumbs; switches, radio controls, avatars and status dots stay round. Dark inputs use a recessed surface.
 
-Load Archivo (headings and UI, normal 400/500/600) and IBM Plex Mono (numbers, identifiers and shortcuts, normal 400/500) from your application layout, then link the Aurora bundle:
+Optionally load Archivo (headings and UI, normal 400/500/600) and IBM Plex Mono (numbers, identifiers and shortcuts, normal 400/500) from your application layout, then link the Aurora bundle:
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"/>
@@ -62,33 +62,43 @@ Coordinate theme-private `--sa-aurora-*` accent hover/active and tint companions
 
 ### Concourse
 
-Use `stellar-admin.concourse.css` as the single theme bundle. Load Source Sans 3 (UI, weights 400/500/600/700) and IBM Plex Mono (identifiers and values, weights 400/500) from the app layout, self-hosted or through a font provider. The stylesheet does not fetch fonts. Existing tag helpers and the `.dark` class work unchanged.
+Use `stellar-admin.concourse.css` as the single theme bundle. Optionally load Source Sans 3 (UI, weights 400/500/600/700) and IBM Plex Mono (identifiers and values, weights 400/500) from the app layout, self-hosted or through a font provider. The stylesheet does not fetch fonts. Existing tag helpers and the `.dark` class work unchanged.
 
 Concourse has cool grey surfaces, a blue accent, 4px corners, and 34px default controls. Actions use colour changes without press movement; neutral hover feedback stays distinct from persistent selection. Use existing components rather than the handoff's `.cc-*` classes. Concourse-specific `--sa-concourse-*` variables are implementation details. When overriding the primary colour, coordinate its `--sa-concourse-primary-hover`, `--sa-concourse-primary-pressed`, and `--sa-concourse-primary-border` companions in both modes; destructive actions have corresponding hover, border, and foreground companions. Touch target sizing belongs to the app's responsive composition.
 
 ### Ledger
 
-Use `stellar-admin.ledger.css` as the single theme bundle. Load Lexend (UI, weights 300–700) and JetBrains Mono (identifiers and shortcuts, weights 400–500) from the app's layout, self-hosted or through a font provider. The library stylesheet does not fetch fonts. Existing tag helpers and the `.dark` class work unchanged, including shared surfaces used by Pro.
+Use `stellar-admin.ledger.css` as the single theme bundle. Optionally load Lexend (UI, weights 300–700) and JetBrains Mono (identifiers and shortcuts, weights 400–500) from the app's layout, self-hosted or through a font provider. The library stylesheet does not fetch fonts. Existing tag helpers and the `.dark` class work unchanged, including shared surfaces used by Pro.
 
 Preserve raised borders and shadows on primary, secondary, outline, and destructive buttons; ghost and link actions are flat. Do not reproduce the original prototype's `.ldg-*` classes. Use StellarAdmin's normal components. Ledger-specific `--sa-ledger-*` variables are implementation details rather than shared tokens. If customising primary/destructive colours, coordinate their `--sa-ledger-primary-hover`, `--sa-ledger-primary-border`, `--sa-ledger-destructive-hover`, `--sa-ledger-destructive-border`, and `--sa-ledger-destructive-foreground` companions in both modes.
 
 ### Ice
 
-Use `stellar-admin.ice.css` as the single theme bundle. Load IBM Plex Sans (UI, weights 400/500/600) and JetBrains Mono (data and shortcuts, weights 400/500/700) from the app layout, self-hosted or through a font provider. The stylesheet does not fetch fonts. Existing tag helpers and the `.dark` class work unchanged.
+Use `stellar-admin.ice.css` as the single theme bundle. Optionally load IBM Plex Sans (UI, weights 400/500/600) and JetBrains Mono (data and shortcuts, weights 400/500/700) from the app layout, self-hosted or through a font provider. The stylesheet does not fetch fonts. Existing tag helpers and the `.dark` class work unchanged.
 
 Ice uses square geometry, hairline borders, no elevation shadows, blue accents, and 28px default controls. Preserve neutral hover feedback, indicator-only dropdown check/radio selection, and outlined destructive actions; destructive confirmation buttons inside alert-dialog footers are filled. Use `font-mono tabular-nums` for numeric app content. Choose larger controls where the app needs more generous touch targets. Theme-private `--sa-ice-*` tokens retain separate readable accent, bright fill/marker, and light/dark ink roles; coordinate these when changing the accent.
 
 ### Observatory
 
-Use `stellar-admin.observatory.css` as the single theme bundle. Load IBM Plex Sans (normal 400/500/600) and IBM Plex Mono (normal 400/500) from the app layout, self-hosted or through a font provider. The stylesheet does not fetch fonts; existing tag helpers and the `.dark` class work unchanged.
+Use `stellar-admin.observatory.css` as the single theme bundle. Optionally load IBM Plex Sans (normal 400/500/600) and IBM Plex Mono (normal 400/500) from the app layout, self-hosted or through a font provider. The stylesheet does not fetch fonts; existing tag helpers and the `.dark` class work unchanged.
 
 Observatory uses cool neutral surfaces, blue/cyan accents, 4px corners, 32px default controls, and compact table spacing (7px vertical cell padding). Dark cards have no shadow. Compact is built in, with no density setting required. Use `font-mono tabular-nums` for numeric app content and larger controls where touch interaction needs them. Preserve indicator-only dropdown selection, neutral hover feedback, and matching default-tab/segmented-control surfaces. Theme-private `--sa-observatory-*` tokens are implementation details; coordinate accent hover/active and tint companions when changing brand colours.
 
 ### Meridian
 
-Use `stellar-admin.meridian.css` as the single theme bundle. Load Instrument Sans (display headings, normal 600), Work Sans (UI text, normal 400/500/600), and JetBrains Mono (data/shortcuts, normal 400/500) from the app layout, self-hosted or through a font provider. The stylesheet does not fetch fonts; existing tag helpers and the `.dark` class work unchanged.
+Use `stellar-admin.meridian.css` as the single theme bundle. Optionally load Instrument Sans (display headings, normal 600), Work Sans (UI text, normal 400/500/600), and JetBrains Mono (data/shortcuts, normal 400/500) from the app layout, self-hosted or through a font provider. The stylesheet does not fetch fonts; existing tag helpers and the `.dark` class work unchanged.
 
 Meridian uses warm paper/deep umber surfaces, brass accents, 2px corners, 32px default controls and 11px vertical table-cell padding. Small controls are 26px and large controls 40px. Keep the display/body/mono type roles distinct; use `font-mono tabular-nums` for numeric app content. Preserve trailing checkmarks for both dropdown checkbox and radio selection, neutral hover feedback, and matching default tabs/segmented controls. Choose larger controls for touch use. Coordinate theme-private `--sa-meridian-*` accent hover/active and tint companions when changing brand colours.
+
+## Optional custom-theme fonts
+
+All seven custom themes work with only their StellarAdmin stylesheet. Their original families come first in the CSS stacks; if those fonts are unavailable, the browser uses native fallbacks automatically. Omit the Google Fonts stylesheet and preconnect links for zero font downloads. No JavaScript or additional fallback CSS is required. Font sizes, weights and spacing stay the same.
+
+Aurora, Meridian and Parallax fall back to `"Helvetica Neue", Helvetica, Arial, "Liberation Sans", system-ui, sans-serif`. Concourse, Ice and Observatory use `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`. Ledger uses `"Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif`; Avenir is optional and not guaranteed on every device. Meridian headings prefer Instrument Sans, then Work Sans, before the native stack.
+
+All seven mono stacks fall back to `ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace`. Native results depend on the operating system and installed fonts; do not promise identical rendering across platforms.
+
+For the original typography, load only the selected theme’s families and weights from the app layout, using Google Fonts or self-hosted files. `display=swap` shows fallback text while loading and switches when ready, potentially changing wrapping. `display=optional` avoids a late swap but may keep native fonts for that page view. The StellarAdmin demos use `display=swap`. Fallback stacks alone do not reduce the download size when the app still requests web fonts.
 
 ## Dark mode
 
